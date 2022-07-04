@@ -6,7 +6,6 @@ function numerosPares(vetor) {
             vetor[i] = 0;
         }
     }
-
     return vetor;
 }
 

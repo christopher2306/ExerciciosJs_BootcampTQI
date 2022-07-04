@@ -1,4 +1,4 @@
-let count = 0;
+var count = 0;
 
 const CURRENT_NUMBER = document.getElementById('currentNumber');
 
@@ -10,6 +10,7 @@ function increment() {
 			count++;
 			CURRENT_NUMBER.innerHTML = count;
 			document.getElementById("subtrair").style.display = "block";
+			verifica();
 		} else {
 			document.getElementById("adicionar").style.display = "none";
 		}
@@ -21,11 +22,19 @@ function decrement() {
 		count--;
 		CURRENT_NUMBER.innerHTML = count;
 		document.getElementById("adicionar").style.display = "block";
+		verifica();
 	} else {
 		document.getElementById("subtrair").style.display = "none";
 	}
 
 }
 
+function verifica() {
+	if(count < 0 ){
+		document.getElementById("currentNumber").style.color = "red";
+	} else {
+		document.getElementById("currentNumber").style.color = "black";
+	}
+}
 
 
